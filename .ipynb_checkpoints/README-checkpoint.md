@@ -13,10 +13,9 @@ or
 ./train_cc3m.sh
 ```
 ## Inferece
-Soon
-
+See `inference_decap.ipynb`.
 ## Citation
-
+Soon
 ## Acknowledgments
 This repository is heavily based on [ClipCap](https://github.com/rmokady/CLIP_prefix_caption).
 For training we used the data of [COCO dataset](https://cocodataset.org/#home) and [Conceptual Captions](https://ai.google.com/research/ConceptualCaptions/).
