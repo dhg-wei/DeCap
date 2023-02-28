@@ -56,7 +56,7 @@ class ClipCocoDataset(Dataset):
         self.clip_tokenizer = clip.tokenize
         self.prefix_length = 10
         self.max_seq_len = 20
-        with open('coco_training.json', 'r') as f:
+        with open(data_path, 'r') as f:
             self.captions = json.load(f)
         random.shuffle(self.captions)
         self.captions_tokens = []
@@ -239,11 +239,11 @@ def train_decoder(dataset: ClipCocoDataset, args,
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--data', default='./data/coco/doubleMTA_lr1e5_ignore0.pkl')
-    parser.add_argument('--out_dir', default='./cc3m_model')
+    parser.add_argument('--out_dir', default='./coco_model')
     parser.add_argument('--prefix', default='./coco_prefix', help='prefix for saved filenames')
     parser.add_argument('--dataset', default='coco', help='coco or cc3m or bookcorpus')
     parser.add_argument('--epochs', type=int, default=10)
-    parser.add_argument('--save_every', type=int, default=10)
+    parser.add_argument('--save_every', type=int, default=1)
     parser.add_argument('--prefix_length', type=int, default=1)
     parser.add_argument('--prefix_length_clip', type=int, default=1)
     parser.add_argument('--bs', type=int, default=64)
@@ -255,7 +255,7 @@ def main():
     parser.add_argument('--local_rank', type=int, default=-1, metavar='N', help='Local process rank.') 
     args = parser.parse_args()
     prefix_length = args.prefix_length
-    dataset = ClipCocoDataset(args.dataset+'_train.json', prefix_length, normalize_prefix=args.normalize_prefix)
+    dataset = ClipCocoDataset('data/'+args.dataset+'_train.json', prefix_length, normalize_prefix=args.normalize_prefix)
 
     train_decoder(dataset, args, output_dir=args.out_dir, output_prefix=args.prefix)
 
