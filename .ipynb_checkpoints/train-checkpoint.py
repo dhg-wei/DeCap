@@ -136,7 +136,7 @@ def load_model(config_path: str, epoch_or_latest: Union[str, int] = '_latest'):
     
 
 def train_decoder(dataset: ClipCocoDataset, args,
-          lr: float = 1e-5, warmup_steps: int = 10, output_dir: str = ".", output_prefix: str = ""):
+          lr: float = 1e-5, warmup_steps: int = 1000, output_dir: str = ".", output_prefix: str = ""):
 
     # device = torch.device('cuda:1')
     batch_size = args.bs
