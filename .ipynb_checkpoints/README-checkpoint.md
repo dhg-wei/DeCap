@@ -1,4 +1,4 @@
-# DeCap
+# Official implementation for DeCap
 DeCap: Decoding CLIP Latents for Zero-Shot Captioning via Text-Only Training
 
 Published at ICLR 2023 
