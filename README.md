@@ -1,6 +1,10 @@
 # DeCap
-DeCap: Decoding CLIP Latents for Zero-Shot Captioning via Text-Only Training [DeCap](https://openreview.net/pdf?id=Lt8bMlhiwx2)
+DeCap: Decoding CLIP Latents for Zero-Shot Captioning via Text-Only Training
+
 Published at ICLR 2023 
+
+Paper link: [DeCap](https://openreview.net/pdf?id=Lt8bMlhiwx2)
+
 ## Data
 Download [coco_train](https://drive.google.com/file/d/1k4LlhgwnvpkUlzQjtTomnDFvlkboTxOH/view?usp=share_link) to `data`.
 Download [cc3m_train](https://drive.google.com/file/d/1-xfOLJasBTqTrSnsyAncKSfsjSSN5RTH/view?usp=share_link) to `data`.
