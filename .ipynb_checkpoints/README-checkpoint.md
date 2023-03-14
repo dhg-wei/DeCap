@@ -18,17 +18,18 @@ or
 ```
 ## Inferece
 See `inference_decap.ipynb`.
+## Pretrained model
+Train on coco captions: [model_coco](https://drive.google.com/file/d/1EFI0aujIWBr3dTC_a2hdoV4QJenAlEWU/view?usp=share_link)
+Train on CC3M: Soon
 ## Citation
 ```
-@inproceedings{
-li2023decap,
-title={DeCap: Decoding {CLIP} Latents for Zero-Shot Captioning via Text-Only Training},
-author={Wei Li and Linchao Zhu and Longyin Wen and Yi Yang},
-booktitle={The Eleventh International Conference on Learning Representations },
-year={2023},
-url={https://openreview.net/forum?id=Lt8bMlhiwx2}
+@inproceedings{lidecap,
+  title={DeCap: Decoding CLIP Latents for Zero-Shot Captioning via Text-Only Training},
+  author={Li, Wei and Zhu, Linchao and Wen, Longyin and Yang, Yi},
+  booktitle={The Eleventh International Conference on Learning Representations}
 }
 ```
+
 ## Acknowledgments
 This repository is heavily based on [ClipCap](https://github.com/rmokady/CLIP_prefix_caption).
 For training we used the data of [COCO dataset](https://cocodataset.org/#home) and [Conceptual Captions](https://ai.google.com/research/ConceptualCaptions/).
