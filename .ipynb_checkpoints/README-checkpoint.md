@@ -18,8 +18,9 @@ or
 ```
 ## Inferece
 See `inference_decap.ipynb`.
-## Pretrained model
+## Pretrained models
 Train on coco captions: [model_coco](https://drive.google.com/file/d/1EFI0aujIWBr3dTC_a2hdoV4QJenAlEWU/view?usp=share_link)
+
 Train on CC3M: Soon
 ## Citation
 ```
