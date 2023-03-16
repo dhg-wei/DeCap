@@ -82,10 +82,13 @@ class MLP(nn.Module):
                 layers.append(act())
         self.model = nn.Sequential(*layers)
 
-class ClipGpt2Model(nn.Module):
+class DeCap(nn.Module):
 
     def __init__(self,prefix_size: int = 512):
-        super(ClipGpt2Model, self).__init__()
+        super(DeCap, self).__init__()
+
+        # decoder: 4 layers transformer with 4 attention heads
+        # the decoder is not pretrained
         with open('./decoder_config.pkl','rb') as f:
             config = pickle.load(f)
         self.decoder = GPT2LMHeadModel(config)
@@ -152,7 +155,7 @@ def train_decoder(dataset: ClipCocoDataset, args,
     SEED=42
     torch.cuda.manual_seed_all(SEED)
     
-    model = ClipGpt2Model()
+    model = DeCap()
 
     clip_model_type = "ViT-B/32"
     clip_model_name = clip_model_type.replace('/', '_')
